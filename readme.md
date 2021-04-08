@@ -15,7 +15,7 @@ Activate the virtual environment.Then,
     pip install -r requirements.txt
 
 Then,
-
+    Add your gmail credentials in th filemailCredentials.py under myproject,
     python manage.py runserver
 
 NOTE: THE PROJECT IS MADE ON LINUX, THE PACKAGES MAY DIFFER.

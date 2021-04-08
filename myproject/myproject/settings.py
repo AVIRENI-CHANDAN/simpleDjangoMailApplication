@@ -27,13 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-#DataFlair
+from . import mailCredentials
+obj = mailCredentials.gmailCredentials()
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = obj.getMailServer()
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'avengerspythonmail@gmail.com'
-EMAIL_HOST_PASSWORD = '$Avireni1287'
+EMAIL_HOST_USER = obj.getMailId()
+EMAIL_HOST_PASSWORD = obj.getMailPass()
 
 # Application definition
 
